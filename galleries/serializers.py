@@ -8,6 +8,7 @@ class GallerySerializer(serializers.ModelSerializer):
 
 class ImageGallerySerializer(serializers.ModelSerializer):
     urlImage = serializers.SerializerMethodField('get_image_url')
+    urlImage_small = serializers.SerializerMethodField('get_image_urls')
 
     class Meta:
         model = ImageGallery
@@ -15,3 +16,6 @@ class ImageGallerySerializer(serializers.ModelSerializer):
 
     def get_image_url(self, obj):
         return obj.urlImage.url
+
+    def get_image_urls(self, obj):
+        return obj.urlImage_small.url
