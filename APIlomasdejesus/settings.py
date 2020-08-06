@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'contact',
+    'galleries',
+    'news',
+    'partners',
     'rest_framework',
 ]
 
@@ -69,12 +72,13 @@ TEMPLATES = [
     },
 ]
 
-
+"""
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
     )
 }
+"""
 
 
 WSGI_APPLICATION = 'APIlomasdejesus.wsgi.application'
@@ -122,6 +126,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 
 # Static files (CSS, JavaScript, Images)
