@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'contact',
+    'galleries',
+    'news',
+    'partners',
     'rest_framework',
 ]
 
@@ -69,12 +72,13 @@ TEMPLATES = [
     },
 ]
 
-
+"""
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
     )
 }
+"""
 
 
 WSGI_APPLICATION = 'APIlomasdejesus.wsgi.application'
@@ -93,6 +97,19 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'lomasbd',
+        'USER': 'admin',
+        'PASSWORD': '9387704asd',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+"""
 
 
 # Password validation
@@ -126,6 +143,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 
 # Static files (CSS, JavaScript, Images)
