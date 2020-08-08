@@ -9,4 +9,5 @@ urlpatterns = [
     path('order/views', views.NewsOrderByViews.as_view() ),
     path('filter/date', views.NewsByDate.as_view() ),
     path('detail/<int:pk>', views.NewsDetail.as_view() ),
+    path('list/by_category/<int:pk>',views.NewsListbyCategory.as_view())
 ]

@@ -18,6 +18,13 @@ class NewsList(APIView):
 		serializer = NewsSerializer(snippets, many=True)
 		return Response(serializer.data)
 
+class NewsListbyCategory(APIView):
+    def get(self, request, pk, format=None):
+        category = Category.objects.get(pk=pk)
+        snippets = News.objects.filter(category=category)
+        serializer = NewsSerializer(snippets, many=True)
+        return Response(serializer.data)
+
 class NewsLastThree(APIView):
     def get(self, request, format=None):
     	snippets = News.objects.order_by('date')[0:3]
