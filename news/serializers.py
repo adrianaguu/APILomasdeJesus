@@ -4,6 +4,7 @@ from .models import Category, News
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
+        fields = '__all__'
         
 
 
