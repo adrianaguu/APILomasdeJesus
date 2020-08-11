@@ -18,7 +18,7 @@ class News(models.Model):
 	urlImage_narrow = models.ImageField(verbose_name="Imagen Angosta",upload_to='images/news/narrow')
 	category = models.ForeignKey(Category, on_delete=models.CASCADE,verbose_name="Categoría")
 	views = models.IntegerField(verbose_name="Vistas",default=0)
-	date = models.DateTimeField(default=timezone.now)
+	date = models.DateField(default=timezone.now)
 
 	def __str__(self):
 		return self.title
