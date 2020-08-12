@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'news',
     'partners',
     'rest_framework',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -96,8 +97,8 @@ DATABASES = {
         'NAME': 'lomasbd',
         'USER': 'admin',
         'PASSWORD': '9387704asd',
-        'HOST': 'localhost',
-        #'HOST':'54.160.110.125',
+        #'HOST': 'localhost',
+        'HOST':'54.160.110.125',
         'PORT': '5432',
     }
 }
