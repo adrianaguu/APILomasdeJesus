@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'news',
     'partners',
     'rest_framework',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
