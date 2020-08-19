@@ -78,7 +78,7 @@ class NewsDetail(APIView):
 
     def get(self, request, pk, format=None):
         news = self.get_object(pk)
-        serializer = SnippetSerializer(news)
+        serializer = NewsSerializer(news)
         news.views = news.views + 1
         news.save() 
         return Response(serializer.data)

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,7 +44,6 @@ INSTALLED_APPS = [
     'news',
     'partners',
     'rest_framework',
-    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -97,8 +97,8 @@ DATABASES = {
         'NAME': 'lomasbd',
         'USER': 'admin',
         'PASSWORD': '9387704asd',
-        #'HOST': 'localhost',
-        'HOST':'54.160.110.125',
+        'HOST': 'localhost',
+        #'HOST':'54.160.110.125',
         'PORT': '5432',
     }
 }
