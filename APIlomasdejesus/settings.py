@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*#t=r@uthrv@809q7gwxgbm@objj%g+4=5@xs6lk%hd!e0jl74'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost','54.160.110.125']
 
@@ -77,13 +77,13 @@ TEMPLATES = [
     },
 ]
 
-"""
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
     )
 }
-"""
+
 
 
 WSGI_APPLICATION = 'APIlomasdejesus.wsgi.application'
@@ -157,4 +157,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
